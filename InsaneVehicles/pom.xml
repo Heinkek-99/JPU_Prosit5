@@ -22,4 +22,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <modules>
+  	<module>InsaneVehicles.controller</module>
+  	<module>InsaneVehicles.view</module>
+  	<module>InsaneVehicles.contract</module>
+  	<module>InsaneVehicles.model</module>
+  	<module>InsaneVehicles.main</module>
+  </modules>
 </project>
