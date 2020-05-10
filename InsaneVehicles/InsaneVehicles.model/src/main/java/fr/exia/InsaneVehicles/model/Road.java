@@ -10,12 +10,13 @@ import java.io.InputStreamReader;
 import java.util.Observable;
 
 import fr.exia.InsaneVehicles.model.element.IElement;
+import fr.exia.InsaneVehicles.model.element.motionless.MotionlessElementsFactory;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class Road extends Observable implements IRoad {
+public  class Road extends Observable implements IRoad {
 
     private int          width;
 
@@ -48,6 +49,10 @@ public class Road extends Observable implements IRoad {
         buffer.close();
     }
     
+	public int getWidth() {
+		return this.width;
+	}
+    
     private void setWidth(final int width) {
         this.width = width;
     }
@@ -76,4 +81,6 @@ public class Road extends Observable implements IRoad {
     public Observable getObservable() {
         return this;
     }
+
+
 }

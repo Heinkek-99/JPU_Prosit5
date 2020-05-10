@@ -1,7 +1,10 @@
 /**
  * 
  */
-package fr.exia.InsaneVehicles.contract; 
+package fr.exia.InsaneVehicles.contract;
+
+import fr.exia.InsaneVehicles.controller.IOrderPerformer;
+
 /**
  * @author Heidy Kengne
  *

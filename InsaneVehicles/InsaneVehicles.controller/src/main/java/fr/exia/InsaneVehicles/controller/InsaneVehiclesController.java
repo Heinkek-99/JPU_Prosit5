@@ -3,15 +3,18 @@
  */
 package fr.exia.InsaneVehicles.controller;
 
+import java.io.IOException;
+
 import fr.exia.InsaneVehicles.contract.IIinsaneVehiclesController;
 import fr.exia.InsaneVehicles.contract.IInsaneVehiclesModel;
 import fr.exia.InsaneVehicles.contract.IInsaneVehiclesView;
+
 
 /**
  * @author Heidy Kengne
  *
  */
-public class InsaneVehiclesController implements  IOrderPerformer, IIinsaneVehiclesController{
+public class InsaneVehiclesController implements  IIinsaneVehiclesController, IOrderPerformer{
 
     private static final int     speed = 300;
 
@@ -31,7 +34,7 @@ public class InsaneVehiclesController implements  IOrderPerformer, IIinsaneVehic
         this.stackOrder = UserOrder.NOP;
 		
 	}
-
+    
 	public final void play() throws InterruptedException {
         while (this.getModel().getMyVehicle().isAlive()) {
             Thread.sleep(speed);
@@ -96,6 +99,14 @@ public class InsaneVehiclesController implements  IOrderPerformer, IIinsaneVehic
 	 */
 	private void setStackOrder(UserOrder stackOrder) {
 		this.stackOrder = stackOrder;
+	}
+
+	public void orderPerform(UserOrder userOrder) throws IOException {
+        this.setStackOrder(userOrder);		
+	}
+
+	public IOrderPerformer getOrderPeformer() {
+		return this;
 	}
     
     

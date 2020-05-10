@@ -39,5 +39,6 @@
 			<attribute name="javadoc_location" value="jar:file:/E:/X24/Nouveau%20dossier/Pro%203/showboard.doc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/InsaneVehicles.controller"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

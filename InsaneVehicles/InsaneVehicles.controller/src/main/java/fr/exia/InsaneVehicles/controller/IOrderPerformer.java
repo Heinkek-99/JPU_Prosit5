@@ -13,4 +13,6 @@ public interface IOrderPerformer {
 
     void orderPerform(UserOrder userOrder) throws IOException;
 
+	void play() throws InterruptedException;
+
 }

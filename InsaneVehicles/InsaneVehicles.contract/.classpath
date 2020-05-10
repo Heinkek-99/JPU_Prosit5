@@ -34,5 +34,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/InsaneVehicles.controller"/>
+	<classpathentry kind="src" path="/InsaneVehicles.model"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

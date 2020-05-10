@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import fr.exia.InsaneVehicles.contract.IInsaneVehiclesView;
+import fr.exia.InsaneVehicles.controller.IOrderPerformer;
+import fr.exia.InsaneVehicles.controller.UserOrder;
 import fr.exia.InsaneVehicles.model.IRoad;
 import fr.exia.InsaneVehicles.model.element.mobile.IMobile;
 import fr.exia.showboard.BoardFrame;
@@ -88,7 +90,11 @@ public class InsaneVehiclesView implements Runnable,KeyListener, IInsaneVehicles
         }
     }
     
-    private static UserOrder keyCodeToUserOrder(final int keyCode) {
+    private IRoad getRoad() {
+		return this.road;
+	}
+
+	private static UserOrder keyCodeToUserOrder(final int keyCode) {
         UserOrder userOrder;
         switch (keyCode) {
             case KeyEvent.VK_RIGHT:
@@ -105,7 +111,6 @@ public class InsaneVehiclesView implements Runnable,KeyListener, IInsaneVehicles
     }
     
     public void keyTyped(final KeyEvent keyEvent) {
-        // Nop
     }
     
     public final void keyPressed(final KeyEvent keyEvent) {
@@ -117,7 +122,6 @@ public class InsaneVehiclesView implements Runnable,KeyListener, IInsaneVehicles
     }
     
     public void keyReleased(final KeyEvent keyEvent) {
-        // Nop
     }
     
     

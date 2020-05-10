@@ -5,6 +5,7 @@ package fr.exia.InsaneVehicles.model;
 
 import java.io.IOException;
 
+import fr.exia.InsaneVehicles.contract.IInsaneVehiclesModel;
 import fr.exia.InsaneVehicles.model.element.mobile.IMobile;
 import fr.exia.InsaneVehicles.model.element.mobile.MyVehicle;
 
@@ -23,20 +24,33 @@ public class InsaneVehiclesModel implements IInsaneVehiclesModel {
         this.setRoad(new Road(fileName));
         this.setMyVehicle(new MyVehicle(myVehicleStartX, myVehicleStartY, this.getRoad()));
     }
-    
-    public final IRoad getRoad() {
-        return this.road;
-    }
-    
-    private void setRoad(final IRoad road) {
-        this.road = road;
-    }
-    
-    public final IMobile getMyVehicle() {
-        return this.myVehicle;
-    }
-    
-    private void setMyVehicle(final IMobile myVehicle) {
-        this.myVehicle = myVehicle;
-    }
+
+	/**
+	 * @return the road
+	 */
+	public IRoad getRoad() {
+		return road;
+	}
+
+	/**
+	 * @param road the road to set
+	 */
+	public void setRoad(IRoad road) {
+		this.road = road;
+	}
+
+	/**
+	 * @return the myVehicle
+	 */
+	public IMobile getMyVehicle() {
+		return myVehicle;
+	}
+
+	/**
+	 * @param myVehicle the myVehicle to set
+	 */
+	public void setMyVehicle(IMobile myVehicle) {
+		this.myVehicle = myVehicle;
+	}
+
 }

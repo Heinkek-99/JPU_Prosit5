@@ -15,7 +15,7 @@ import fr.exia.showboard.IBoard;
  * @author Heidy Kengne
  *
  */
-public class Mobile extends Element implements IMobile{
+public abstract class Mobile extends Element implements IMobile{
 
 	private Point   position;
 
